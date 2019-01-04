@@ -1,0 +1,1 @@
+pyinstaller main.pyw --noconsole --onefile --icon=app.ico
