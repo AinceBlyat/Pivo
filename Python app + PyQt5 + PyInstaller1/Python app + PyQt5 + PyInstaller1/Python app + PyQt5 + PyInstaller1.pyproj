@@ -24,11 +24,13 @@
     <Content Include="app.ico" />
     <Content Include="Build_EXE.bat" />
     <Content Include="design.ui" />
+    <Content Include="resurs.qrc" />
     <Content Include="UI_Builder.bat" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="gui.py" />
     <Compile Include="main.pyw" />
+    <Compile Include="resurs_rc.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
