@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
-
-import sys,time  # sys нужен для передачи argv в QApplication
+import win32api
+import win32con
+win32api.keybd_event(win32con.SHIFT_PRESSED, 0, win32con.KEYEVENTF_EXTENDEDKEY, 0)
+import sys,time, win32com.client  # sys нужен для передачи argv в QApplication
 from PyQt5 import QtWidgets,QtCore
 import gui as design
 
@@ -20,6 +22,7 @@ class MainApp(QtWidgets.QMainWindow, design.Ui_MainWindow):
             self.TREINER(text) # Режим тренажёра
     def KeyPress(self,char_):
         print(char_)
+        shell=win32com.client.Dispatch("WScript.Shell")
 
     def TREINER(self,text):
         print("Трейнер получил:",text)
