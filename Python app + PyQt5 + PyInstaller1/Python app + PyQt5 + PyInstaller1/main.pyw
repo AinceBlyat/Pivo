@@ -14,6 +14,7 @@ class MainApp(QtWidgets.QMainWindow, design.Ui_MainWindow):
         self.setupUi(self)  # Это нужно для инициализации нашего дизайна
         self.clean.clicked.connect(self.Enter.clear) # clicked-ивент, clear-обработчик(слот)
         self.start.clicked.connect(self.moder)
+        self.shell=win32com.client.Dispatch("WScript.Shell")
     def moder(self):
         text=self.Enter.toPlainText()
         if self.first.isChecked():
@@ -21,8 +22,7 @@ class MainApp(QtWidgets.QMainWindow, design.Ui_MainWindow):
         else:
             self.TREINER(text) # Режим тренажёра
     def KeyPress(self,char_):
-        print(char_)
-        shell=win32com.client.Dispatch("WScript.Shell")
+        self.shell.SendKeys(char_)
 
     def TREINER(self,text):
         print("Трейнер получил:",text)
