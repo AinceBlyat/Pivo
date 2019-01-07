@@ -68,10 +68,13 @@ class Ui_MainWindow(object):
         self.second = QtWidgets.QRadioButton(self.groupBox)
         self.second.setGeometry(QtCore.QRect(20, 50, 82, 17))
         self.second.setObjectName("second")
+        self.Timer = QtWidgets.QSlider(self.centralwidget)
+        self.Timer.setGeometry(QtCore.QRect(160, 340, 131, 21))
+        self.Timer.setMaximum(10)
+        self.Timer.setOrientation(QtCore.Qt.Horizontal)
+        self.Timer.setObjectName("Timer")
         self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(170, 220, 151, 151))
-        self.label.setText("")
-        self.label.setPixmap(QtGui.QPixmap(":/data/Pivasss.jpg"))
+        self.label.setGeometry(QtCore.QRect(160, 320, 61, 21))
         self.label.setObjectName("label")
         MainWindow.setCentralWidget(self.centralwidget)
 
@@ -89,5 +92,6 @@ class Ui_MainWindow(object):
         self.groupBox.setTitle(_translate("MainWindow", "Режимы"))
         self.first.setText(_translate("MainWindow", "Ввод"))
         self.second.setText(_translate("MainWindow", "Тренажёр"))
+        self.label.setText(_translate("MainWindow", "Задержка"))
 
 import resurs_rc

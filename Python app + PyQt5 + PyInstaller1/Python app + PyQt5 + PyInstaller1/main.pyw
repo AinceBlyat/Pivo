@@ -36,6 +36,7 @@ class MainApp(QtWidgets.QMainWindow, design.Ui_MainWindow):
             k1.append(int(k[k.find("x",end)+1:k.find(";",end)]))
             k1.append(float(k[k.find(";",end)+1:k.rfind(";",end)]))
             saver.append(k1)
+        time.sleep(self.Timer.value)
         for k in saver:
             repeat=k[1]
             forma=list(k[0])
